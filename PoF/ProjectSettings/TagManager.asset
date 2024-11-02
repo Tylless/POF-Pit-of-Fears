@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Liftable
+  - BSB
+  - Pushable
+  - HideSpot
+  - CameraT
+  - Breakable
+  - DealDamage
+  - Tutorial
+  - LightHigh
+  - LightMidHigh
+  - LightMid
+  - LightLow
+  - NPC
+  - Inimigo
+  - PlayerTuto
+  - ECA
+  - LightCol
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Cant Hit Player
+  - Trigger
+  - Breakable
+  - Ground
+  - Liftable
+  - Pushable
+  - Cant Interact With POs
+  - Can be used to hide
+  - CameraT
+  - DealDamage
+  - Tutorial
+  - LightTrig
+  - LightCol
+  - NPC
+  - Kill
+  - Inimigo
+  - PlayerTuto
+  - EnemyTrigger
+  - SpawnPoint
+  - PDead
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
