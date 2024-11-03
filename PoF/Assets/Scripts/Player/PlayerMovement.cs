@@ -134,14 +134,27 @@ public class PlayerMovement : MonoBehaviour
             Animation();
             
             
-        if(Input.GetKeyDown(KeyCode.Y))
-        {
-        RespawnController.instance.Respawn();           
-        }
+        
             
     }
 
     public void Die()
+    {
+        
+        if(onGround)
+        {
+            anim.SetTrigger("DieGround");
+            PRB.velocity = Vector2.zero;
+            BlockMovment();
+        }else
+        {
+            anim.SetTrigger("DieAir");
+            PRB.velocity = Vector2.zero;
+            BlockMovment();
+        }    
+    
+    }
+    public void Respawn()
     {
         RespawnController.instance.Respawn();
     }

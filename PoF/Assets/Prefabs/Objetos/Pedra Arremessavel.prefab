@@ -397,6 +397,7 @@ MonoBehaviour:
   onGround: 0
   liftPointRight: {fileID: 5576892603090747413}
   liftPointLeft: {fileID: 8176834097592446875}
+  BreakEffect: {fileID: 8716500166677019061, guid: 28dd0d5aaa990f8449676eeb72f1c55f, type: 3}
   beingLifted: 0
   SR: {fileID: 5047668745670109647}
   RB: {fileID: 5466958082532030093}

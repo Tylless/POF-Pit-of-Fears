@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4338444485233447528}
   - component: {fileID: 2607205837775880879}
   - component: {fileID: 5644583306996079084}
-  m_Layer: 18
+  m_Layer: 17
   m_Name: Light Collider
   m_TagString: LightCol
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 3296541251995600648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1888237, y: 0.38068056, z: 0}
+  m_LocalPosition: {x: -0, y: 0.38068056, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -335,7 +335,7 @@ Transform:
   m_GameObject: {fileID: 4232477530434732456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.59441185, y: -0.19034028, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -974,5 +974,5 @@ MonoBehaviour:
   HO:
     serializedVersion: 2
     m_Bits: 8192
-  hideColor: {r: 1, g: 1, b: 1, a: 0.6509804}
+  hideColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0.5019608}
   normalColor: {r: 1, g: 1, b: 1, a: 1}

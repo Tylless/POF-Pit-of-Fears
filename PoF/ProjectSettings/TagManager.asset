@@ -22,6 +22,7 @@ TagManager:
   - PlayerTuto
   - ECA
   - LightCol
+  - Scared Cutscene
   layers:
   - Default
   - TransparentFX
@@ -49,8 +50,8 @@ TagManager:
   - EnemyTrigger
   - SpawnPoint
   - PDead
-  - 
-  - 
+  - Scared
+  - Particle
   - 
   - 
   - 

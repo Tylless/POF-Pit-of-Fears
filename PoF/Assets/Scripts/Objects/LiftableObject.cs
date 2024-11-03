@@ -11,6 +11,7 @@ public class LiftableObject : MonoBehaviour
     public bool onGround;
     public GameObject liftPointRight;
     public GameObject liftPointLeft;
+    public GameObject BreakEffect;
     
     public bool beingLifted;
     public SpriteRenderer SR;
@@ -39,6 +40,13 @@ public class LiftableObject : MonoBehaviour
     void Start()
     {
 
+    }
+     public void SummonPar(float xSpeed)
+    {
+        GameObject Eff = Instantiate(BreakEffect);
+        Eff.transform.position = this.transform.position;
+        Vector2 fall = new Vector2(xSpeed, 4f);
+        Eff.GetComponent<Rigidbody2D>().AddForce(fall, ForceMode2D.Impulse);
     }
 
     void Update()
@@ -202,8 +210,9 @@ public class LiftableObject : MonoBehaviour
     {
         if(other.gameObject.tag == "Breakable")
         {
-        anim.SetTrigger("Break");
-        
+        Destroy();
+        SummonPar(.5f);
+        SummonPar(-.5f);
         }
 
     }

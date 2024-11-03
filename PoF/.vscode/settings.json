@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Pit of Fears.sln"
+    "dotnet.defaultSolution": "PoF.sln"
 }

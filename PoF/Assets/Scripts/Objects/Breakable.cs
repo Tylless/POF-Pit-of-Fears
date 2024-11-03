@@ -7,7 +7,7 @@ using System;
 public class Breakable : MonoBehaviour
 {
     public static Breakable instance;
-    public Animator anim;
+    public GameObject BreakEffect;
     public GameObject col;
     public Transform spawn;
     void Awake()
@@ -26,12 +26,19 @@ public class Breakable : MonoBehaviour
         this.gameObject.SetActive(false);
         
     }
+    public void SummonPar(float xSpeed)
+    {
+        GameObject Eff = Instantiate(BreakEffect);
+        Eff.transform.position = this.transform.position;
+        Vector2 fall = new Vector2(xSpeed, 4f);
+        Eff.GetComponent<Rigidbody2D>().AddForce(fall, ForceMode2D.Impulse);
+    }
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "DealDamage")
-        {
-        anim.SetTrigger("Break");
-        
-        }
+        Destroy();
+        SummonPar(1f);
+        SummonPar(-1f);
+        SummonPar(1.5f);
+        SummonPar(-1.5f);
     }
     public void GoToSpawn()
     {
