@@ -13,16 +13,14 @@ TagManager:
   - Breakable
   - DealDamage
   - Tutorial
-  - LightHigh
-  - LightMidHigh
-  - LightMid
-  - LightLow
   - NPC
   - Inimigo
   - PlayerTuto
   - ECA
   - LightCol
   - Scared Cutscene
+  - LightChanger
+  - LightMidHigh
   layers:
   - Default
   - TransparentFX

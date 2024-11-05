@@ -78,7 +78,6 @@ GameObject:
   - component: {fileID: 8259753867449176649}
   - component: {fileID: 419549623527682760}
   - component: {fileID: 1333452154059977320}
-  - component: {fileID: 6821601573504600338}
   - component: {fileID: 223123624171059704}
   m_Layer: 8
   m_Name: "Pedra Quebr\xE1vel"
@@ -182,27 +181,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &6821601573504600338
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931406859737835477}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bef2fbfa5a5e290459019e5f4d4294be, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &223123624171059704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,5 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0bb9ad2c73b36746af13b21a4a25535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6821601573504600338}
+  BreakEffect: {fileID: 0}
   col: {fileID: 2634058299385571}
+  spawn: {fileID: 0}

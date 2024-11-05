@@ -379,7 +379,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8535909417781914921}
   - component: {fileID: 5851744246236422685}
-  - component: {fileID: 234161400988210918}
   m_Layer: 20
   m_Name: KillHitBox
   m_TagString: Untagged
@@ -447,19 +446,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.32196, y: 3.8275638}
   m_EdgeRadius: 0
---- !u!114 &234161400988210918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3283874345784601748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f57022ef6367c439908bab23692d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SGE: {fileID: 0}
 --- !u!1 &4744893666806403799
 GameObject:
   m_ObjectHideFlags: 0

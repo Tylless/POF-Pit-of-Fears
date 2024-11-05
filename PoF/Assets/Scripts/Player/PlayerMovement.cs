@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Looking at")]
     public bool facingRight;
     public float facingDir;
+    public float rotNum;
 
     [Header("Standing")]
     public bool canStand;
@@ -111,7 +112,6 @@ public class PlayerMovement : MonoBehaviour
         
         if(canMove)
         {
-            
             Walk();
             Noise();
             Visibility();
@@ -120,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
             Lift();
             Throw();
             TurnCheck();
+            
             Jump();
             Push();
             Throw();
@@ -137,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
         
             
     }
+   
 
     public void Die()
     {
@@ -144,7 +146,9 @@ public class PlayerMovement : MonoBehaviour
         if(onGround)
         {
             anim.SetTrigger("DieGround");
+            
             PRB.velocity = Vector2.zero;
+            
             BlockMovment();
         }else
         {
@@ -157,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
     public void Respawn()
     {
         RespawnController.instance.Respawn();
+        transform.localScale = new Vector2(0.5f , transform.localScale.y);
     }
    
 
@@ -220,7 +225,8 @@ public class PlayerMovement : MonoBehaviour
         {
             visibility = 0;
         }
-    }   
+    }
+    
     public void TurnCheck()
     {
         float moveInput = Input.GetAxis("Horizontal");
@@ -236,20 +242,19 @@ public class PlayerMovement : MonoBehaviour
         
         if(facingRight)
         {
-           Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
-           transform.rotation = Quaternion.Euler(rotator);
            facingRight = !facingRight;
            facingDir = -1f;
            CM.CallTurn();
+           transform.localScale = new Vector2(-0.5f , transform.localScale.y);
         }else
         {
-            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
-           transform.rotation = Quaternion.Euler(rotator);
            facingRight = !facingRight;
            facingDir = 1f;
            CM.CallTurn();
+           transform.localScale = new Vector2(0.5f , transform.localScale.y);
         }
     }
+    
     public void Animation()
     {
         if(standing)

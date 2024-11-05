@@ -29,6 +29,7 @@ public class SmallGroundEnemy : MonoBehaviour
     public Transform checkPoint;
     public Collider2D col;
     public PlayerMovement p;
+    public bool killing;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,9 @@ public class SmallGroundEnemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        if(!killing)
+       {   
         CheckTrigger();
         ChaseAndPatrol();
         if(patrolling)
@@ -57,11 +60,14 @@ public class SmallGroundEnemy : MonoBehaviour
         {
             Chase();
             anim.SetBool("Hunting", true);
-            sr.sortingOrder = 10;
+            sr.sortingOrder = 12;
             col.gameObject.SetActive(true);
             CL.SetActive(true);
         }
-        
+        }else
+       {
+        RB.velocity = Vector2.zero;
+       }
     }
     public void CheckTrigger()
     {
@@ -115,6 +121,7 @@ public class SmallGroundEnemy : MonoBehaviour
     }
     public void ChaseAndPatrol()
     {
+       
         if(onRange && p.visibility > 0 && onChaseArea)
         {
             chasing = true;
@@ -143,6 +150,7 @@ public class SmallGroundEnemy : MonoBehaviour
         {
             actualSpeed = chaseSpeed;
         }
+       
     }
     
     
@@ -165,6 +173,44 @@ public class SmallGroundEnemy : MonoBehaviour
         }
         
     }
+     private void OnCollisionEnter2D(Collision2D p)
+    {
+         if (p.gameObject.tag == "Player")
+        {
+            Kill();
+        }
+    }
+    public void Kill()
+    {
+        patrolling = false;
+        chasing = false;
+        killing = true;
+        if(PlayerMovement.instance.gameObject.transform.position.x > this.transform.position.x)
+        {
+            transform.localScale = new Vector3(.4f, .4f, .4f);
+            PlayerMovement.instance.gameObject.transform.localScale = new Vector2(0.5f , 0.5f);
+        }
+        if(PlayerMovement.instance.gameObject.transform.position.x < this.transform.position.x)
+        {
+            transform.localScale = new Vector3(-.4f, .4f, .4f);
+            PlayerMovement.instance.gameObject.transform.localScale = new Vector2(-0.5f , 0.5f);
+        }
+        if(PlayerMovement.instance.onGround)
+        {
+            anim.SetTrigger("Kill");
+        }else
+        {
+            anim.SetTrigger("KillAir");
+        }
+        
+        PlayerMovement.instance.Die();
+        
+    }       
+    public void StopKilling()
+    {
+        killing = false;
+    }
+    
    
     
 }

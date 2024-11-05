@@ -28,7 +28,7 @@ public class LiftableObject : MonoBehaviour
     public LayerMask ground;
     public bool RP;
     public bool LP;
-    public Animator anim;
+    
     
     void Awake()
     {

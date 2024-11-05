@@ -275,7 +275,6 @@ GameObject:
   - component: {fileID: 5047668745670109647}
   - component: {fileID: 5466958082532030093}
   - component: {fileID: 1060548979909681125}
-  - component: {fileID: 2432252214529631211}
   m_Layer: 10
   m_Name: Pedra Arremessavel
   m_TagString: DealDamage
@@ -414,25 +413,4 @@ MonoBehaviour:
     m_Bits: 2560
   RP: 0
   LP: 0
-  anim: {fileID: 2432252214529631211}
---- !u!95 &2432252214529631211
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739828539694687078}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8006d67688a136e4abc0072646448f36, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  anim: {fileID: 0}

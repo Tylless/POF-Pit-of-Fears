@@ -48,7 +48,6 @@ public class RespawnController : MonoBehaviour
         CameraManager.instance._currentCamera = respawnCamera;
         thePlayer.transform.position = respawnPoint;
         PlayerLight.instance.iluminação = luzResp;
-        
         CameraManager.instance._currentCamera.enabled = true; 
         PlayerMovement.instance.anim.SetTrigger("WakeUpResp");
         PlayerMovement.instance.lifting = false;

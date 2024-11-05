@@ -10,6 +10,7 @@ public class PlayerLight : MonoBehaviour
     public Light2D luz;
     [Header("Luz")]
     public float iluminação;
+   
     // Start is called before the first frame update
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class PlayerLight : MonoBehaviour
     void Update()
     {
        UpLight();
+       
     }
     public void UpLight()
     {
@@ -39,23 +41,7 @@ public class PlayerLight : MonoBehaviour
             luz.pointLightOuterRadius += Time.deltaTime * 10;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        
-        if(other.gameObject.tag == ("LightHigh"))
-        {
-            iluminação = 10f;
-        }
-        if(other.gameObject.tag == ("LightMidHigh"))
-        {
-            iluminação = 7f;
-        }
-        if(other.gameObject.tag == ("LightMid"))
-        {
-            iluminação = 5f;
-        }
-        if(other.gameObject.tag == ("LightLow"))
-        {
-            iluminação = 1.3f;
-        }
-    }
+
+   
+    
 }
