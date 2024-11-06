@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,15 +23,20 @@ public class Alucinations : MonoBehaviour
     void Alu()
     {
         
-        PlayerMovement.instance.PRB.velocity = Vector2.zero;
         StartCoroutine(ShowAlu());
         
     }
+    public void PlayAnim()
+    {
+    PlayerMovement.instance.Scared();
+    }
     public IEnumerator ShowAlu()
     {
-        PlayerMovement.instance.BlockMovment();
-        PlayerMovement.instance.anim.SetTrigger("Scared");
-        PlayerLight.instance.iluminação = 1.3f;
+        PlayerMovement.instance.PRB.velocity = Vector2.zero;
+        yield return new WaitUntil(()  => PlayerMovement.instance.onGround == true);
+        PlayAnim();
+        PlayerMovement.instance.PRB.velocity = Vector2.zero;
+        
         frame.SetActive(true);
         image1.SetActive(true);
         yield return new WaitForSeconds(1f);
@@ -51,17 +57,23 @@ public class Alucinations : MonoBehaviour
         image2.SetActive(false);
         image1.SetActive(false);
         frame.SetActive(false);
-        PlayerLight.instance.iluminação = 7f;
+        
         
         
         yield return null;
         
         Destroy(this.gameObject);
-        
-       
+        PlayerMovement.instance.scared = false;
         PlayerMovement.instance.UnblockMovment();
+        
     }
-    private void OnTriggerEnter2D(Collider2D other) {
+
+    private Func<bool> System(bool onGround)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player")
         {
             Alu();

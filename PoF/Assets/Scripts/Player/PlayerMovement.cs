@@ -30,7 +30,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Move")]
     public bool canMove;
 
-    
+    [Header("Scared")]
+    public bool scared;
 
     [Header("Looking at")]
     public bool facingRight;
@@ -120,15 +121,10 @@ public class PlayerMovement : MonoBehaviour
             Lift();
             Throw();
             TurnCheck();
-            
             Jump();
             Push();
             Throw();
             Hide();
-        }else
-        {
-            
-            
         }
             CheckGround();
             CanPush();
@@ -150,11 +146,14 @@ public class PlayerMovement : MonoBehaviour
             PRB.velocity = Vector2.zero;
             
             BlockMovment();
-        }else
+        }else if(!onGround)
         {
-            anim.SetTrigger("DieAir");
-            PRB.velocity = Vector2.zero;
+            
             BlockMovment();
+            falling = false;
+            jumping = false;
+            PRB.velocity = Vector2.zero;
+            anim.SetTrigger("DieAir");
         }    
     
     }
@@ -319,6 +318,14 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("Hiding?", false);
         }
+        if(scared)
+        {
+            anim.SetBool("Scared", true);
+            anim.SetBool("Standing?", false);
+        }else
+        {
+            anim.SetBool("Scared", false);
+        }
     }
     
     public void Walk()
@@ -378,6 +385,11 @@ public class PlayerMovement : MonoBehaviour
             
         
     }
+   public void Scared()
+   {
+    scared = true;
+    canMove = false;
+   }
    
     public void Stand()
     {
@@ -396,6 +408,8 @@ public class PlayerMovement : MonoBehaviour
         if(leftFoot || rightFoot || leftFoot && rightFoot)
         {
             onGround = true;
+            falling = false;
+            jumping = false;
         }else
         {
             onGround = false;
@@ -456,26 +470,29 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
         }
-        if(PRB.velocity.y > 0)
+        if(PRB.velocity.y > 0 && !onGround)
         {
             jumping = true;
             falling = false;
 
         }
-        if(PRB.velocity.y < 0)
+        if(PRB.velocity.y < 0 && !onGround)
         {
             falling = true;
             jumping = false;
             
 
         }
+        
         if(onGround)
         {
+            
             falling = false;
             jumping = false;
         }
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
+            
             if(!lifting)
             {
                 Vector2 jforce = new Vector2(PRB.velocity.x, jumpForce);

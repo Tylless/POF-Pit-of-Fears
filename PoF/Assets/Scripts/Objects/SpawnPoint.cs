@@ -12,7 +12,6 @@ public class SpawnPoint : MonoBehaviour
         if (other.tag == "Player")
         {
             RespawnController.instance.SetSpawn(transform.position);
-             RespawnController.instance.luzResp = luz;
             RespawnController.instance.respawnCamera = RC;
         }
     }

@@ -10,7 +10,6 @@ public class RespawnController : MonoBehaviour
     public float waitToRespawn;
     public GameObject DS;
     private GameObject thePlayer;
-    public float luzResp;
     public CinemachineVirtualCamera respawnCamera;
     // Start is called before the first frame update
     private void Awake()
@@ -47,7 +46,7 @@ public class RespawnController : MonoBehaviour
         yield return new WaitForSeconds(waitToRespawn);
         CameraManager.instance._currentCamera = respawnCamera;
         thePlayer.transform.position = respawnPoint;
-        PlayerLight.instance.iluminação = luzResp;
+        
         CameraManager.instance._currentCamera.enabled = true; 
         PlayerMovement.instance.anim.SetTrigger("WakeUpResp");
         PlayerMovement.instance.lifting = false;

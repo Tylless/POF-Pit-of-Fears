@@ -198,17 +198,23 @@ public class SmallGroundEnemy : MonoBehaviour
         if(PlayerMovement.instance.onGround)
         {
             anim.SetTrigger("Kill");
+            CallDeath();
         }else
         {
             anim.SetTrigger("KillAir");
         }
         
-        PlayerMovement.instance.Die();
+        
         
     }       
     public void StopKilling()
     {
         killing = false;
+    }
+
+    public void CallDeath()
+    {
+        PlayerMovement.instance.Die();
     }
     
    
