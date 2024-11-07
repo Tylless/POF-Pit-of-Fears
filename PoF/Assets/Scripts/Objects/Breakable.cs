@@ -34,11 +34,14 @@ public class Breakable : MonoBehaviour
         Eff.GetComponent<Rigidbody2D>().AddForce(fall, ForceMode2D.Impulse);
     }
     private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "DealDamage")
+        {
         Destroy();
         SummonPar(1f);
         SummonPar(-1f);
         SummonPar(1.5f);
         SummonPar(-1.5f);
+        }
     }
     public void GoToSpawn()
     {

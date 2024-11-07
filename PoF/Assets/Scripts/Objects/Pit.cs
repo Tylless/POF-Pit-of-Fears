@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pit : MonoBehaviour
 {
     public Animator anim;
+    public bool explode;
+    public NextScene NS;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,16 @@ public class Pit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(explode)
+        {
+            
+            anim.SetTrigger("Explode");
+            
+        }
+    }
+    public void CallScene()
+    {
+        NS.CallLoading();
     }
     public void Destroy()
     {
