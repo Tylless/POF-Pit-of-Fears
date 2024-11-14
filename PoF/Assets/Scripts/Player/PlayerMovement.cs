@@ -90,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
     public bool hiding;
     public bool canHide;
     public float hideNerf;
-    public LayerMask HO;
     public Color hideColor;
     public Color normalColor;
     private void Awake()
@@ -587,6 +586,19 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Hide()
     {
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+        if(canHide)
+        {
+        if(!hiding)
+        {
+            hiding = true;
+        }else{
+        
+            hiding = false;
+        }
+        }
+        }
         if(hiding)
         {
             canCrawl = false;
@@ -604,13 +616,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canHide = false;
         }
-        if(canHide && Input.GetKey(KeyCode.W))
-        {
-            hiding = true;
-        }else
-        {
-            hiding = false;
-        }
+        
         
 
        
@@ -630,7 +636,7 @@ public class PlayerMovement : MonoBehaviour
                 canLift = true;
             }
         }
-        if(other.gameObject.tag == ("HideSpot") || other.gameObject.tag == ("HideSpot") && other.gameObject.tag != ("HideSpot"))
+        if(other.gameObject.tag == ("EnterHide") || other.gameObject.tag == ("EnterHide") && other.gameObject.tag != ("EnterHide"))
         {
             if(crawling || lifting || pushing)
             {}
@@ -657,7 +663,7 @@ public class PlayerMovement : MonoBehaviour
                 canLift = true;
             } 
         }
-        if(other.gameObject.tag == ("HideSpot") || other.gameObject.tag == ("HideSpot") && other.gameObject.tag != ("HideSpot"))
+        if(other.gameObject.tag == ("EnterHide") || other.gameObject.tag == ("EnterHide") && other.gameObject.tag != ("EnterHide"))
         {
             if(crawling || lifting || pushing)
             {}
@@ -673,9 +679,13 @@ public class PlayerMovement : MonoBehaviour
         {
             canStand = true;
         }
-        if(other.gameObject.tag == ("HideSpot"))
+        if(other.gameObject.tag == ("EnterHide"))
         {
             canHide = false;
+        }
+        if(other.gameObject.tag == ("HideSpot"))
+        {
+            hiding = false;
         }
         canLift = false;
     }

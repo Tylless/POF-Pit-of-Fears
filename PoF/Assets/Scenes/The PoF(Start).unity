@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 31564868}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.201285, y: -2.3451748, z: -10.001833}
+  m_LocalPosition: {x: -10.091286, y: -5.8551745, z: -10.001833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -517,7 +517,7 @@ Transform:
   m_GameObject: {fileID: 248450924}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.201285, y: -2.3451748, z: -10.001833}
+  m_LocalPosition: {x: -10.091301, y: -5.2548246, z: -10.001833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -815,7 +815,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: b2724342e7b07444f9db17779c2460db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 499620e1098085346a830e47d9ec957e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1385,10 +1385,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1668,11 +1668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6383828677189266030, guid: a24d8cb8c84e19c41a56c335ba6eb8a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.68
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 6383828677189266030, guid: a24d8cb8c84e19c41a56c335ba6eb8a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 6383828677189266030, guid: a24d8cb8c84e19c41a56c335ba6eb8a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7621,6 +7621,10 @@ PrefabInstance:
     - target: {fileID: 9005077108201931355, guid: 99f22c35e9d711446ae76fb2fc3b9e07, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005077108201931355, guid: 99f22c35e9d711446ae76fb2fc3b9e07, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

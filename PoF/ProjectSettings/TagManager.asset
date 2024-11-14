@@ -21,6 +21,7 @@ TagManager:
   - Scared Cutscene
   - LightChanger
   - LightMidHigh
+  - EnterHide
   layers:
   - Default
   - TransparentFX

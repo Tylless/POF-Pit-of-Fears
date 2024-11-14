@@ -355,7 +355,7 @@ MonoBehaviour:
   onRange: 0
   actualSpeed: 0
   patrolSpeed: 2
-  chaseSpeed: 3.5
+  chaseSpeed: 6.5
   chasing: 0
   patrolling: 1
   onChaseArea: 0
