@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 8c13314910463324b85ec6bb1eb3be9b
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: a87ac63642ccd8d4bbc7edd3a5fa519c
+  - enabled: 1
     path: Assets/Scenes/The PoF(Start).unity
     guid: c93712d32f2c986489d0e8bf54cc7087
   - enabled: 1
@@ -14,4 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo End.unity
     guid: 68c73c344295f4e49acd03f3653797bb
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/PermaDeath.unity
+    guid: 50edcc0304458f844b99816cf3107c90
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: f170bb39e0f3b9048a86af8e0b87c489, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: dffb56fd44407d749a3c6b05d7114157, type: 2}

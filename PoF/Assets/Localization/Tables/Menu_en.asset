@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b87b68f2c9132724da9667e27dd2fed1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 57928262803456
+    m_Localized: NEW GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928359272448
+    m_Localized: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928363466752
+    m_Localized: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928363466753
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855360
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855361
+    m_Localized: MUSIC VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855362
+    m_Localized: SFX VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855363
+    m_Localized: RESOLUTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855364
+    m_Localized: FULLSCREEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855365
+    m_Localized: VSYNC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855366
+    m_Localized: LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855367
+    m_Localized: CONTROLS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855368
+    m_Localized: IMAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855369
+    m_Localized: AUDIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855370
+    m_Localized: MASTER VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855371
+    m_Localized: APPLY ALL CHANGES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855372
+    m_Localized: SELECT LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855373
+    m_Localized: LOAD GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855374
+    m_Localized: PRESS ANY KEY TO START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855375
+    m_Localized: ARE YOU SURE THAT YOU WANT TO EXIT?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855376
+    m_Localized: EMPTY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614086426624
+    m_Localized: WALK - A/D
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614157729792
+    m_Localized: JUMP - SPACE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614157729793
+    m_Localized: INTERACT - E
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924096
+    m_Localized: GRAB - E
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924097
+    m_Localized: THROW - R
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924098
+    m_Localized: PUSH - E(HOLD)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924099
+    m_Localized: CRAWL - S(HOLD)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924100
+    m_Localized: HIDE - W
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

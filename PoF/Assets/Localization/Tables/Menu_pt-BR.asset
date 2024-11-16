@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: b87b68f2c9132724da9667e27dd2fed1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 57928262803456
+    m_Localized: NOVO JOGO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928359272448
+    m_Localized: SAIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928363466752
+    m_Localized: "CONFIGURA\xC7\xD5ES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928363466753
+    m_Localized: SIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855360
+    m_Localized: "N\xC3O"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855361
+    m_Localized: "VOLUME DA M\xDASICA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855362
+    m_Localized: VOLUME DOS EFEITOS SONOROS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855363
+    m_Localized: "RESOLU\xC7\xC3O"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855364
+    m_Localized: TELA CHEIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855365
+    m_Localized: VSYNC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855366
+    m_Localized: IDIOMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855367
+    m_Localized: CONTROLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855368
+    m_Localized: IMAGEM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855369
+    m_Localized: "\xC1UDIO"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855370
+    m_Localized: VOLUME GERAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855371
+    m_Localized: "APLICAR TODAS AS MUDAN\xC7AS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855372
+    m_Localized: SELECIONE O IDIOMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855373
+    m_Localized: CARREGAR JOGO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855374
+    m_Localized: APERTE QUALQUER TECLA PARA INICIAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855375
+    m_Localized: TEM CERTEZA QUE DESEJA SAIR?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57928371855376
+    m_Localized: VAZIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614086426624
+    m_Localized: ANDAR - A/D
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614157729792
+    m_Localized: "PULAR - ESPA\xC7O"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614157729793
+    m_Localized: INTERAGIR - E
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924096
+    m_Localized: PEGAR - E
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924097
+    m_Localized: ARREMESSAR - R
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924098
+    m_Localized: EMPURRAR - E(SEGURE)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924099
+    m_Localized: ENGATINHAR - S(SEGURE)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474614161924100
+    m_Localized: SE ESCONDER - W
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

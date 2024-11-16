@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour
 {
-    public string sceneName;
+    
     public GameObject loadScreen;
     public GameObject loadText;
     public float value;
@@ -19,9 +19,9 @@ public class NextScene : MonoBehaviour
         instance = this;
       }
     }
-    public void CallLoading()
+    public void CallLoading(string nextscene)
     {
-        StartCoroutine(LoadNewScene(sceneName));
+        StartCoroutine(LoadNewScene(nextscene));
     }
     
     private IEnumerator LoadNewScene( string newScene)

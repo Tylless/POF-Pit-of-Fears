@@ -838,6 +838,7 @@ MonoBehaviour:
   noise: 0
   visibility: 0
   canMove: 1
+  scared: 0
   facingRight: 1
   facingDir: 1
   rotNum: 0
@@ -879,8 +880,7 @@ MonoBehaviour:
   hiding: 0
   canHide: 0
   hideNerf: 0.4
-  HO:
-    serializedVersion: 2
-    m_Bits: 8192
   hideColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0.5019608}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
+  BSBHead: {fileID: 0}
+  BSBBody: {fileID: 0}

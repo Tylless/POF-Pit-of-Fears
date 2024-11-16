@@ -92,6 +92,11 @@ public class PlayerMovement : MonoBehaviour
     public float hideNerf;
     public Color hideColor;
     public Color normalColor;
+
+    [Header("PermaDeath")]
+    public GameObject BSBHead;
+    public GameObject BSBBody;
+    public GameObject DeathScreen;
     private void Awake()
     {
         if (instance == null)
@@ -155,6 +160,49 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("DieAir");
         }    
     
+    }
+    public void PermaDie()
+    {
+        
+        if(onGround)
+        {
+            anim.SetTrigger("PermaDeathGround");
+            
+            PRB.velocity = Vector2.zero;
+            
+            BlockMovment();
+        }else if(!onGround)
+        {
+            
+            BlockMovment();
+            falling = false;
+            jumping = false;
+            PRB.velocity = Vector2.zero;
+            anim.SetTrigger("PermaDeathAir");
+        }    
+    
+    }
+    public void ShowDeathScreen()
+    {
+        NextScene.instance.CallLoading("PermaDeath");
+    }
+    public void SpawnBody()
+    {
+        GameObject body = Instantiate(BSBBody);
+        GameObject head = Instantiate(BSBHead);
+        body.transform.position = liftPoint.transform.position;
+        head.transform.position = new Vector3(liftPoint.transform.position.x, liftPoint.transform.position.y + 1f, liftPoint.transform.position.z);
+    }
+    
+        
+    
+
+    public void BeSmashed()
+    {
+
+            BlockMovment();
+            PRB.velocity = Vector2.zero;
+            anim.SetTrigger("DieSmash");
     }
     public void Respawn()
     {

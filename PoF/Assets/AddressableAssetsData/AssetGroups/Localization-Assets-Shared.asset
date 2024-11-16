@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5a2f1e2320cfa714fb3d65bb427d14d6
+  m_SerializeEntries:
+  - m_GUID: b87b68f2c9132724da9667e27dd2fed1
+    m_Address: Assets/Localization/Tables/Table1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7da3f6330433dfb4eb13f84f0e72c441
+    m_Address: Assets/Localization/Tables/Start Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ea0cf18860d6fe4c9195035cdae37f4
+    m_Address: Assets/Localization/Tables/The Entrance Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 706f6a621f12f9c4dbfafd2847b951fd
+    m_Address: Assets/Localization/Tables/Death Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 570275b0a8a67844a8cbdbae947fd8e7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b7ee85adfa2700b4e9d93be8d8b179ff, type: 2}
+    - {fileID: 11400000, guid: 7d15725dfdd947d4f9423f8ce0d72422, type: 2}

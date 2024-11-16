@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: The Entrance_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 2ea0cf18860d6fe4c9195035cdae37f4, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 37631746048
+    m_Localized: PRESS "E" TO GRAB THE STONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37677883392
+    m_Localized: HOLD "SHIFT" TO RUN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37677883393
+    m_Localized: PRESS "ESC" TO CONTINUE THE CUTSCENE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37677883394
+    m_Localized: PRESS "R" TO THROW THE STONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37682077696
+    m_Localized: HOLD "E" TO PUSH THE STONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37682077697
+    m_Localized: PRESS "SPACE" TO JUMP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37682077698
+    m_Localized: PRESS "W" TO HIDE BEHIND STONES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37682077699
+    m_Localized: HOLD "SPACE" TO JUMP HIGHER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37682077700
+    m_Localized: HOLD "S" TO CRAWL
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

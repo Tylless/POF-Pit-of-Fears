@@ -25,7 +25,7 @@ public class Pit : MonoBehaviour
     }
     public void CallScene()
     {
-        NS.CallLoading();
+        NS.CallLoading("The Entrance");
     }
     public void Destroy()
     {
