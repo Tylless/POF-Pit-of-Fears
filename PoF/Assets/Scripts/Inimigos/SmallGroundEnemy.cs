@@ -148,7 +148,7 @@ public class SmallGroundEnemy : MonoBehaviour
         }
         if(chasing)
         {
-            actualSpeed = chaseSpeed;
+            actualSpeed = chaseSpeed * GameDificultLevel.instance.speedMultiplier;
         }
        
     }
@@ -214,7 +214,7 @@ public class SmallGroundEnemy : MonoBehaviour
 
     public void CallDeath()
     {
-        PlayerMovement.instance.Die();
+        PlayerMovement.instance.Death();
     }
     
    

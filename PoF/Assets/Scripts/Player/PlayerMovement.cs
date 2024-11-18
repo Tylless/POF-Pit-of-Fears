@@ -90,13 +90,12 @@ public class PlayerMovement : MonoBehaviour
     public bool hiding;
     public bool canHide;
     public float hideNerf;
-    public Color hideColor;
-    public Color normalColor;
+    
 
     [Header("PermaDeath")]
     public GameObject BSBHead;
     public GameObject BSBBody;
-    public GameObject DeathScreen;
+    
     private void Awake()
     {
         if (instance == null)
@@ -139,7 +138,17 @@ public class PlayerMovement : MonoBehaviour
             
     }
    
-
+    public void Death()
+    {
+        if(GameDificultLevel.instance.permaDeath)
+        {
+            PermaDie();
+        }else
+        {
+            Die();
+        }
+    }
+    
     public void Die()
     {
         
@@ -161,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
         }    
     
     }
+    
     public void PermaDie()
     {
         
@@ -654,11 +664,11 @@ public class PlayerMovement : MonoBehaviour
             canLift = false;
             canPush = false;
             canThrow = false;
-            SR.color = hideColor;
+            SR.sortingOrder = 8;
         }
         if(!hiding)
         {
-            SR.color = normalColor;
+            SR.sortingOrder =11;
         }
         if(jumping || falling || lifting  || pushing || crawling)
         {

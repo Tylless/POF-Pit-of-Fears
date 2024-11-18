@@ -880,7 +880,7 @@ MonoBehaviour:
   hiding: 0
   canHide: 0
   hideNerf: 0.4
-  hideColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0.5019608}
+  hideColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0.14901961}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  BSBHead: {fileID: 0}
-  BSBBody: {fileID: 0}
+  BSBHead: {fileID: 1920909033793631211, guid: a62d4b9d98718374ebd931f09311cafe, type: 3}
+  BSBBody: {fileID: 1745046836799097983, guid: c0a2e0cf457baad458ccb81d20f9ec47, type: 3}
