@@ -751,6 +751,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canMove = false;
         PRB.isKinematic = true;
+        PRB.velocity = Vector2.zero;
     }
     public void UnblockMovment()
     {

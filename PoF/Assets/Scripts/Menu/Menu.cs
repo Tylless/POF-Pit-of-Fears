@@ -25,6 +25,7 @@ public class Menu: MonoBehaviour
     public Image Text;
     public Color black;
     public Color white;
+    public static Menu instance;
 
     [Header("Values")]
     public bool onStartPage;
@@ -32,7 +33,10 @@ public class Menu: MonoBehaviour
 
     private void Awake() {
         onStartPage = true;
-        
+        if(instance = null)
+        {
+            instance = this;
+        }
         
     }
     void Start()
@@ -85,6 +89,10 @@ public class Menu: MonoBehaviour
     {
         newPage.SetActive(true);
         mainPage.SetActive(false);
+    }
+    public void GoToStart()
+    {
+        onStartPage = true;
     }
     public void LoadPage()
     {

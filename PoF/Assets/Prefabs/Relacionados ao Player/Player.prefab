@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7992482580937509702}
   - component: {fileID: 7644932603841798808}
+  - component: {fileID: 4224576246557507075}
   m_Layer: 3
   m_Name: Luz
   m_TagString: Untagged
@@ -263,9 +264,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.414
+  m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -286,8 +287,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.2
-  m_PointLightOuterRadius: 2
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 6
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -298,6 +299,21 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &4224576246557507075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4232477530434732456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672cfff40ada4e74b916011d96e04167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PLight: {fileID: 7644932603841798808}
+  ilumination: 0
+  areaLight: 6
 --- !u!1 &4725244364173850556
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +896,5 @@ MonoBehaviour:
   hiding: 0
   canHide: 0
   hideNerf: 0.4
-  hideColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0.14901961}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
   BSBHead: {fileID: 1920909033793631211, guid: a62d4b9d98718374ebd931f09311cafe, type: 3}
   BSBBody: {fileID: 1745046836799097983, guid: c0a2e0cf457baad458ccb81d20f9ec47, type: 3}

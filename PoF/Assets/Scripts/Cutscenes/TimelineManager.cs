@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -14,6 +15,8 @@ public class TimelineManager : MonoBehaviour
     public bool _fixed = false;
     public bool paused_ = false;
     public PlayerMovement PM;
+    public Transform endingCSPoint;
+    public CinemachineVirtualCamera cameraPosCS;
     
 
     // Start is called before the first frame update
@@ -21,12 +24,14 @@ public class TimelineManager : MonoBehaviour
     {
         director = GetComponent<PlayableDirector>();
         PM = FindFirstObjectByType<PlayerMovement>();
+        PM.BlockMovment();
     }
 
     void OnEnable()
     {
         controller = PAnim.runtimeAnimatorController;
         PAnim.runtimeAnimatorController = null;
+        
     }
     // Update is called once per frame
     void Update()
@@ -37,11 +42,14 @@ public class TimelineManager : MonoBehaviour
         PM.PRB.isKinematic = true;
         PM.PRB.velocity = Vector2.zero;
         director.Pause();
+        CursorManager.instance.CSPauseOn = true;
+
        }else
        {
         PM.PRB.isKinematic = false;
         PM.PRB.velocity = PM.PRB.velocity;
         director.Play();
+        CursorManager.instance.CSPauseOn = false;
        }
         if(director.state == PlayState.Paused)
         {
@@ -65,6 +73,7 @@ public class TimelineManager : MonoBehaviour
             {
             paused_ = true;
             PS.SetActive(true);
+            
             director.Pause();
             
             }
@@ -74,11 +83,16 @@ public class TimelineManager : MonoBehaviour
     {
         PAnim.runtimeAnimatorController = controller;
         _fixed = true;
+        PM.transform.position = endingCSPoint.position;
+        cameraPosCS.enabled = true;
+        CameraManager.instance._currentCamera = cameraPosCS;
+        PM.UnblockMovment();
         
         
     }
     void Destroy()
     {
+        
         Destroy(this.gameObject);
     }
 }

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 0
   lightMultiplier: 0
+  permaDeath: 0
   WhisperOfFearDiff: 0
   EchoesOfDreadDiff: 0
   LivingNightmareDiff: 0
   AbsoluteHorrorDiff: 0
-  permaDeath: 0

@@ -37,6 +37,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cff1028ee81f6884d8ab76cba9628683
+    m_Address: Assets/Localization/Tables/PauseScreen Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 570275b0a8a67844a8cbdbae947fd8e7, type: 2}
   m_SchemaSet:

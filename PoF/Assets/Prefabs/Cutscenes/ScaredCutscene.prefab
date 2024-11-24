@@ -45,9 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dd9e19f0015a9478553bdfddfb3863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: {fileID: 0}
-  image1: {fileID: 0}
-  image2: {fileID: 0}
+  Cutscene: {fileID: 0}
 --- !u!61 &6545118414699648587
 BoxCollider2D:
   m_ObjectHideFlags: 0
