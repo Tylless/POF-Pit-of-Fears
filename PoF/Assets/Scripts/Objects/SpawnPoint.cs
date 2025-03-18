@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public CinemachineVirtualCamera RC;
-    public float luz;
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")

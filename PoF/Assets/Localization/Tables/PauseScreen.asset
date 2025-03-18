@@ -30,7 +30,8 @@ MonoBehaviour:
         - rid: 7609788639789449220
         - rid: 7609788639789449221
         - rid: 7609788639789449222
-        m_ConnectedFile: "C:/Users/arthu/Downloads/L\xEDnguas - POF - PauseScreen.csv"
+        m_ConnectedFile: "C:/Users/arthu/Downloads/L\xEDnguas - POF - PauseScreen
+          (1).csv"
     - rid: 7609788639789449220
       type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:

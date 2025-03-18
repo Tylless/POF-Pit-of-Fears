@@ -46,4 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToRespawn: 1
   DS: {fileID: 0}
+  spawn: 0
   respawnCamera: {fileID: 0}

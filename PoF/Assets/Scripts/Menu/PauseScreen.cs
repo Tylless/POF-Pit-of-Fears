@@ -10,7 +10,17 @@ public class PauseScreen : MonoBehaviour
     public GameObject AudioScreen;
     public GameObject ControlsScreen;
     public bool Paused;
+    public static PauseScreen instance;
     public RuntimeAnimatorController animCon;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     private void Start() {
         CloseScreen();
         Cursor.visible = false;
@@ -20,6 +30,13 @@ public class PauseScreen : MonoBehaviour
         optionsScreen.SetActive(true);
         mainPage.SetActive(false);
     }
+
+    public void Respawn()
+    {
+        RespawnController.instance.Respawn();
+        CloseScreen();
+    }
+
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -70,6 +87,7 @@ public class PauseScreen : MonoBehaviour
         Paused = false;
         PlayerMovement.instance.UnblockMovment();
         PlayerMovement.instance.anim.runtimeAnimatorController = animCon;
+        
     }
     public void BackToMenu()
     {

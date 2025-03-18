@@ -92,6 +92,11 @@ public class LiftableObject : MonoBehaviour
             if(!beingThrown)
             RB.velocity = new Vector2(0f, RB.velocity.y);
             
+
+            if(RespawnController.instance.spawn == 1f)
+        {
+            Destroy(this.gameObject);
+        }
             }
     public void CheckGround()
     {
@@ -208,13 +213,11 @@ public class LiftableObject : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Breakable")
+        if(other.gameObject.tag == "DamageTaker")
         {
-        Destroy();
-        SummonPar(.5f);
-        SummonPar(-.5f);
+        Explode();
+        
         }
-
     }
     public void Destroy()
     {
@@ -222,5 +225,15 @@ public class LiftableObject : MonoBehaviour
 
     }
     
-    
-}
+    public void DestroyThis()
+    {
+        Destroy(this.gameObject);
+    }
+    public void Explode()
+    {
+        Destroy();
+        SummonPar(.5f);
+        SummonPar(-.5f);
+        }
+    }
+

@@ -8,6 +8,7 @@ public class GameDificultLevel : MonoBehaviour
     [Header("GameChanges")]
     public float speedMultiplier;
     public float lightMultiplier;
+    public float stunMultiplier;
     public bool permaDeath;
     [Header("DificultLevels")]
     public bool WhisperOfFearDiff;
@@ -37,6 +38,7 @@ public class GameDificultLevel : MonoBehaviour
         if(WhisperOfFearDiff)
         {
             speedMultiplier = .6f;
+            stunMultiplier = 1.4f;    
             lightMultiplier = 1.25f;
             permaDeath = false;
             EchoesOfDreadDiff = false;
@@ -46,6 +48,7 @@ public class GameDificultLevel : MonoBehaviour
         if(EchoesOfDreadDiff)
         {
             speedMultiplier = 1f;
+            stunMultiplier = 1f; 
             lightMultiplier = 1f;
             permaDeath = false;
             WhisperOfFearDiff = false;
@@ -55,6 +58,7 @@ public class GameDificultLevel : MonoBehaviour
         if(LivingNightmareDiff)
         {
             speedMultiplier = 1.2f;
+            stunMultiplier = .9f; 
             lightMultiplier = 0.95f;
             permaDeath = false;
             EchoesOfDreadDiff = false;
@@ -64,6 +68,7 @@ public class GameDificultLevel : MonoBehaviour
         if(AbsoluteHorrorDiff)
         {
             speedMultiplier = 1.5f;
+            stunMultiplier = .75f; 
             lightMultiplier = .8f;
             permaDeath = true;
             EchoesOfDreadDiff = false;

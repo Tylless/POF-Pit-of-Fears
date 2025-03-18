@@ -10,7 +10,7 @@ public class SmallGroundEnemy : MonoBehaviour
     public Transform[] patrolPoints;
     [Header("Values")]
     public int currentPoint;
-    
+    public bool canMove;
     public float waitCounter;
     public float waitAtPoint;
     public bool onRange;
@@ -21,6 +21,7 @@ public class SmallGroundEnemy : MonoBehaviour
     public bool patrolling;
     public bool onChaseArea;
     [Header("Components")]
+    public static SmallGroundEnemy instance;
     public GameObject CL;
     public Rigidbody2D RB;
     public LayerMask chaseArea;
@@ -31,6 +32,15 @@ public class SmallGroundEnemy : MonoBehaviour
     public PlayerMovement p;
     public bool killing;
     // Start is called before the first frame update
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+    
+    
     void Start()
     {
         p = FindFirstObjectByType<PlayerMovement>();
@@ -43,6 +53,17 @@ public class SmallGroundEnemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+        if(PauseScreen.instance.Paused)
+        {
+            canMove = false;
+        }else
+        {
+            canMove = true;
+        }
+        
+        if(canMove)
     {
         if(!killing)
        {   
@@ -68,6 +89,10 @@ public class SmallGroundEnemy : MonoBehaviour
        {
         RB.velocity = Vector2.zero;
        }
+    }else
+    {
+        RB.velocity = Vector2.zero;
+    }
     }
     public void CheckTrigger()
     {

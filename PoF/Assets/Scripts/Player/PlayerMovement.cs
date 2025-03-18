@@ -91,6 +91,9 @@ public class PlayerMovement : MonoBehaviour
     public bool canHide;
     public float hideNerf;
     
+    [Header("Stuck")]
+    public bool stuck;
+    public float stuckNerf;
 
     [Header("PermaDeath")]
     public GameObject BSBHead;
@@ -103,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
         }
     }
+    
 
     void Start()
     {
@@ -113,8 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
-        if(canMove)
+         if(canMove)
         {
             Walk();
             Noise();
@@ -132,10 +135,6 @@ public class PlayerMovement : MonoBehaviour
             CheckGround();
             CanPush();
             Animation();
-            
-            
-        
-            
     }
    
     public void Death()
@@ -209,15 +208,40 @@ public class PlayerMovement : MonoBehaviour
 
     public void BeSmashed()
     {
-
+        if(onGround)
+        {
+        if(GameDificultLevel.instance.permaDeath)
+        {
             BlockMovment();
             PRB.velocity = Vector2.zero;
+            anim.SetTrigger("PermaDeathSmash");
+        }else
+        {
+            
             anim.SetTrigger("DieSmash");
+            this.transform.localScale = new Vector2(transform.localScale.x, 0.5f);
+            BlockMovment();
+            PRB.velocity = Vector2.zero;
+        }
+        }
+        if(!onGround)
+        {
+            if(GameDificultLevel.instance.permaDeath)
+        {
+           ShowDeathScreen();
+        }else
+        {
+            BlockMovment();
+            Respawn();
+        }
+        }
+            
     }
     public void Respawn()
     {
         RespawnController.instance.Respawn();
-        transform.localScale = new Vector2(0.5f , transform.localScale.y);
+        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        facingRight = !facingRight;
     }
    
 
@@ -313,75 +337,87 @@ public class PlayerMovement : MonoBehaviour
     
     public void Animation()
     {
+        int standHash = Animator.StringToHash("Standing?");
+        int crawlHash = Animator.StringToHash("Crawling?");
+        int liftHash = Animator.StringToHash("Lifting?");
+        int walkHash = Animator.StringToHash("Moving?");
+        int runHash = Animator.StringToHash("Running?");
+        int jumpHash = Animator.StringToHash("Jumping?");
+        int fallHash = Animator.StringToHash("Falling?");
+        int pushHash = Animator.StringToHash("Pushing?");
+        int hideHash = Animator.StringToHash("Hiding?");
+        int scaryHash = Animator.StringToHash("Scared");
+
+
         if(standing)
         {
-            anim.SetBool("Standing?", true);
-            anim.SetBool("Crawling?", false);
-            anim.SetBool("Lifting?", false);
+            anim.SetBool(standHash, true);
+            anim.SetBool(crawlHash, false);
+            anim.SetBool(liftHash, false);
         }
         if(crawling)
         {
-            anim.SetBool("Standing?", false);
-            anim.SetBool("Crawling?", true);
-            anim.SetBool("Lifting?", false);
+            anim.SetBool(standHash, false);
+            anim.SetBool(crawlHash, true);
+            anim.SetBool(liftHash, false);
         }
         if(lifting)
         {
-            anim.SetBool("Standing?", false);
-            anim.SetBool("Crawling?", false);
-            anim.SetBool("Lifting?", true);
+            anim.SetBool(standHash, false);
+            anim.SetBool(crawlHash, false);
+            anim.SetBool(liftHash, true);
         }
         if(walking)
         {
-            anim.SetBool("Moving?", true);
-            anim.SetBool("Running?", false);
+            anim.SetBool(walkHash, true);
+            anim.SetBool(runHash, false);
         }else
         {
-            anim.SetBool("Moving?", false);
+            anim.SetBool(walkHash, false);
         }
         if(running)
         {
-            anim.SetBool("Moving?", true);
-            anim.SetBool("Running?", true);
+            anim.SetBool(walkHash, true);
+            anim.SetBool(runHash, true);
         }else
         {
-            anim.SetBool("Running?", false);
+            anim.SetBool(runHash, false);
         }
         if(jumping)
         {
-            anim.SetBool("Jumping?", true);
+            anim.SetBool(jumpHash, true);
         }else
         {
-            anim.SetBool("Jumping?", false);
+            anim.SetBool(jumpHash, false);
         }
         if(falling)
         {
-            anim.SetBool("Falling?", true);
+            anim.SetBool(fallHash, true);
         }else
         {
-            anim.SetBool("Falling?", false);
+            anim.SetBool(fallHash, false);
         }
         if(pushing)
         {
-            anim.SetBool("Pushing?", true);
+            anim.SetBool(pushHash, true);
         }else
         {
-            anim.SetBool("Pushing?", false);
+            anim.SetBool(pushHash, false);
         }
         if(hiding)
         {
-            anim.SetBool("Hiding?", true);
+            anim.SetBool(hideHash, true);
         }else
         {
-            anim.SetBool("Hiding?", false);
+            anim.SetBool(hideHash, false);
         }
         if(scared)
         {
-            anim.SetBool("Scared", true);
-            anim.SetBool("Standing?", false);
+            anim.SetBool(scaryHash, true);
+            anim.SetBool(standHash, false);
         }else
         {
-            anim.SetBool("Scared", false);
+            anim.SetBool(scaryHash, false);
         }
     }
     
@@ -389,7 +425,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float walkSide = Input.GetAxis("Horizontal");
         
-       
+        
         if(walkSide != 0)
         {
         if(lifting)
@@ -426,10 +462,17 @@ public class PlayerMovement : MonoBehaviour
             running = false;
         }
         if(pushing)
-        {
+        { 
             moveSpeed = walkSpeed * pushNerf;
             walking = true;
             running = false;
+        }
+        if(stuck)
+        {
+            moveSpeed = walkSpeed * stuckNerf;
+            walking = true;
+            running = false;
+            
         }
         PRB.velocity = new Vector2(walkSide * moveSpeed, PRB.velocity.y);
         

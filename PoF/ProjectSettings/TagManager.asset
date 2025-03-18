@@ -19,9 +19,10 @@ TagManager:
   - ECA
   - LightCol
   - Scared Cutscene
-  - LightChanger
-  - LightMidHigh
   - EnterHide
+  - DamageTaker
+  - Kill
+  - DestroyBoss
   layers:
   - Default
   - TransparentFX
@@ -51,9 +52,9 @@ TagManager:
   - PDead
   - Scared
   - Particle
-  - 
-  - 
-  - 
+  - Chefe
+  - Damagable
+  - BossBreak
   - 
   m_SortingLayers:
   - name: Default

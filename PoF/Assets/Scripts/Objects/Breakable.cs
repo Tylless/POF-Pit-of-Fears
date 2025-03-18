@@ -9,7 +9,7 @@ public class Breakable : MonoBehaviour
     public static Breakable instance;
     public GameObject BreakEffect;
     public GameObject col;
-    public Transform spawn;
+  
     void Awake()
     {
         if(instance == null)
@@ -19,13 +19,12 @@ public class Breakable : MonoBehaviour
     }
     void Update()
     {
-        
+        if(RespawnController.instance.spawn == 1f)
+        {
+            Destroy(this.gameObject);
+        }
     }
-    public void Destroy()
-    {
-        this.gameObject.SetActive(false);
-        
-    }
+    
     public void SummonPar(float xSpeed)
     {
         GameObject Eff = Instantiate(BreakEffect);
@@ -36,18 +35,17 @@ public class Breakable : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "DealDamage")
         {
-        Destroy();
+        DestroyThis();
         SummonPar(1f);
         SummonPar(-1f);
         SummonPar(1.5f);
         SummonPar(-1.5f);
         }
     }
-    public void GoToSpawn()
-    {
-     transform.position = spawn.position;
-     this.gameObject.SetActive(true); 
-    }
     
+    public void DestroyThis()
+    {
+        Destroy(this.gameObject);
+    }
     
 }

@@ -488,6 +488,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921844231535317923, guid: 99f22c35e9d711446ae76fb2fc3b9e07, type: 3}
   m_PrefabInstance: {fileID: 2018319570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &231495249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6583323441507212555, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
+  m_PrefabInstance: {fileID: 1912010307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &248450924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1042,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1367141254508027108, guid: a918c0e6863b06946bf6ba67dcdd57c5, type: 3}
       propertyPath: EchoesOfDreadDiff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367141254508027108, guid: a918c0e6863b06946bf6ba67dcdd57c5, type: 3}
+      propertyPath: AbsoluteHorrorDiff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367141254508027108, guid: a918c0e6863b06946bf6ba67dcdd57c5, type: 3}
+      propertyPath: LivingNightmareDiff
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4451415206548767104, guid: a918c0e6863b06946bf6ba67dcdd57c5, type: 3}
@@ -1829,7 +1842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &938734731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6665,6 +6678,8 @@ PlayableDirector:
     value: {fileID: 102302833}
   - key: {fileID: 4510637247906628886, guid: 76456902d3919a148b079a5e1b4587f1, type: 2}
     value: {fileID: 1395723323}
+  - key: {fileID: -6841221354593345002, guid: 76456902d3919a148b079a5e1b4587f1, type: 2}
+    value: {fileID: 231495249}
   m_ExposedReferences:
     m_References:
     - 42188168f616458438ecdb6e7c7d992a: {fileID: 1237718516}
@@ -6673,6 +6688,7 @@ PlayableDirector:
     - 1710278a51902804d8a91356d7eb1c4f: {fileID: 1475961630}
     - 9b730622223f9214097beba09d83021a: {fileID: 158626228}
     - a68892405f9027c4cbd574320c140e7b: {fileID: 31564871}
+    - aab08abb5a5e8124895973c1965a4e9f: {fileID: 1910659477}
     - 65da98e04e83b244da5a7f78709e2e0a: {fileID: 31564871}
     - 72d96b2230bcc824ba8055d3c9dc318a: {fileID: 1436853702}
     - 052ca3ca6bae11c46b9feb9d394f5da7: {fileID: 685217874}
@@ -7489,7 +7505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1315288240310265678, guid: 6a4ed76400c70d1429ba90bcda65ff7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1315288240310265678, guid: 6a4ed76400c70d1429ba90bcda65ff7a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7831,6 +7847,10 @@ PrefabInstance:
     - target: {fileID: 6583323441507212555, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_Name
       value: PS Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583323441507212555, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

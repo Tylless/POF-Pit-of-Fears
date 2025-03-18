@@ -26,6 +26,10 @@ MonoBehaviour:
     m_Localized: CONTINUAR
     m_Metadata:
       m_Items: []
+  - m_Id: 5331868308660224
+    m_Localized: RENASCER
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

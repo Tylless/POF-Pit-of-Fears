@@ -10,7 +10,8 @@ public class PushableObject : MonoBehaviour
     public SpriteRenderer SR;
     public bool beingPushed;
     public float pushingMass;
-    public Transform spawn;
+    public bool pushingByObject;
+    
     void Awake()
     {
         if(instance == null)
@@ -32,16 +33,22 @@ public class PushableObject : MonoBehaviour
             TRB.mass = pushingMass;
             SR.sortingOrder = 10;
         }
-        if(!PM.pushing)
+        if(!PM.pushing && beingPushed)
         {
             TRB.mass = 800f;
             TRB.velocity = new Vector2(0f, TRB.velocity.y);
             SR.sortingOrder = 13;
         }
-        if(!beingPushed)
+        if(pushingByObject)
         {
+            TRB.mass = pushingMass;
+            SR.sortingOrder = 10;
+        }
+        if(!pushingByObject && !PM.pushing)
+        {
+            TRB.velocity = new Vector2(0f, TRB.velocity.y);
             TRB.mass = 800f;
-            SR.sortingOrder = 13;
+            SR.sortingOrder = 10;
         }
         if(PM.lifting)
         {
@@ -50,7 +57,10 @@ public class PushableObject : MonoBehaviour
         {
             TRB.isKinematic = false;
         }
-        
+        if(RespawnController.instance.spawn == 1f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -59,6 +69,10 @@ public class PushableObject : MonoBehaviour
         {
             beingPushed = true;
         }
+        if(other.gameObject.tag =="Pushable")
+        {
+            pushingByObject = true;
+        }
     }
     private void OnCollisionStay2D(Collision2D other)
     {
@@ -66,16 +80,26 @@ public class PushableObject : MonoBehaviour
         {
             beingPushed = true;
         }
+        if(other.gameObject.tag =="Pushable")
+        {
+            pushingByObject = true;
+        }
     }
     private void OnCollisionExit2D(Collision2D other)
     {
         
+            if(other.gameObject.tag =="Player")
+        {
             beingPushed = false;
+        }
+        if(other.gameObject.tag =="Pushable")
+        {
+            pushingByObject = false;
+        }
         
     }
-    public void GoToSpawn()
+    public void DestroyThis()
     {
-     transform.position = spawn.position;
-     this.gameObject.SetActive(true);
+        Destroy(this.gameObject);
     }
 }

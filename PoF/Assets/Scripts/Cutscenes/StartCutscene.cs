@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class StartCutscene : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Player")
+    public GameObject Cutscene;
+    void SCutscene()
+    {
+     Cutscene.SetActive(true);   
+    }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Player")
         {
         }
     }
