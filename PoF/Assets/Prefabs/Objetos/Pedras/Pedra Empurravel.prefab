@@ -209,4 +209,3 @@ MonoBehaviour:
   beingPushed: 0
   pushingMass: 4
   pushingByObject: 0
-  spawn: {fileID: 0}
