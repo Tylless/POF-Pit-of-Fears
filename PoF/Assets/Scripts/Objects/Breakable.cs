@@ -9,6 +9,7 @@ public class Breakable : MonoBehaviour
     public static Breakable instance;
     public GameObject BreakEffect;
     public GameObject col;
+    public GameObject destroyEffect;
   
     void Awake()
     {
@@ -35,7 +36,8 @@ public class Breakable : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "DealDamage")
         {
-        DestroyThis();
+        GameObject eff = Instantiate(destroyEffect, transform);
+        Destroy(this.gameObject);
         SummonPar(1f);
         SummonPar(-1f);
         SummonPar(1.5f);
@@ -43,9 +45,5 @@ public class Breakable : MonoBehaviour
         }
     }
     
-    public void DestroyThis()
-    {
-        Destroy(this.gameObject);
-    }
     
 }

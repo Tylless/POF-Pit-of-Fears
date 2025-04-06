@@ -24,8 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject cameraFollowObject;
     
     [Header("Talk to Enemies")]
-    public float noise;
+    
     public float visibility;
+    public PlayerAudio PA;
 
     [Header("Move")]
     public bool canMove;
@@ -110,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        PA = GetComponent<PlayerAudio>();
         facingRight = true;
         CM = cameraFollowObject.GetComponent<CameraMovement>();
         
@@ -120,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
          if(canMove)
         {
             Walk();
-            Noise();
             Visibility();
             Stand();
             Crawl();
@@ -132,9 +133,9 @@ public class PlayerMovement : MonoBehaviour
             Throw();
             Hide();
         }
-            CheckGround();
-            CanPush();
-            Animation();
+        CheckGround();
+        CanPush();
+        Animation();
     }
    
     public void Death()
@@ -233,6 +234,7 @@ public class PlayerMovement : MonoBehaviour
         {
             BlockMovment();
             Respawn();
+            PA.DieSmash();
         }
         }
             
@@ -240,43 +242,12 @@ public class PlayerMovement : MonoBehaviour
     public void Respawn()
     {
         RespawnController.instance.Respawn();
-        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-        facingRight = !facingRight;
+        transform.localScale = new Vector2(0.5f, transform.localScale.y);
+        facingRight = true;
     }
    
 
-    public void Noise()
-    {
-        if(walking && standing)
-        {
-            noise = 3f;
-        }
-        if(walking && crawling)
-        {
-            noise = 0f;
-        }
-        if(walking && lifting)
-        {
-            noise = 2.1f;
-        }
-        if(running)
-        {
-            noise = 5f;
-        }
-        if (!running && !walking)
-        {
-            noise = 0f;
-        }
-        if(pushing && walking)
-        {
-            noise = 1.8f;
-        }
-        if(hiding && walking)
-        {
-            noise = 0.2f;
-        }
-        
-    }
+   
     public void Visibility()
     {
         if(standing)
@@ -420,6 +391,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(scaryHash, false);
         }
     }
+    
     
     public void Walk()
     {
@@ -722,8 +694,14 @@ public class PlayerMovement : MonoBehaviour
 
        
     }
+
+    
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == ("Ground"))
+        {
+            canStand = false;
+        }
+        if(other.gameObject.tag == ("Ground") && other.gameObject.tag != ("Ground"))
         {
             canStand = false;
         }

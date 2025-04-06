@@ -26,6 +26,9 @@ public class Menu: MonoBehaviour
     public Color black;
     public Color white;
     public static Menu instance;
+    [Header("Sound")]
+    public AudioClip OpenAudio;
+    public AudioClip CloseAudio;
 
     [Header("Values")]
     public bool onStartPage;
@@ -74,6 +77,7 @@ public class Menu: MonoBehaviour
         {
             onStartPage = false;
             mainPage.SetActive(true);
+            
         }
         if(thereIsASave)
         {
@@ -89,40 +93,48 @@ public class Menu: MonoBehaviour
     {
         newPage.SetActive(true);
         mainPage.SetActive(false);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void GoToStart()
     {
         onStartPage = true;
+        
     }
     public void LoadPage()
     {
         loadPage.SetActive(true);
         mainPage.SetActive(false);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void ImagePage()
     {
         imagePage.SetActive(true);
         optionsPage.SetActive(false);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void AudioPage()
     {
         audioPage.SetActive(true);
         optionsPage.SetActive(false);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void LanguagePage()
     {
         languagePage.SetActive(true);
         optionsPage.SetActive(false);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void ControlPage()
     {
         controlsPage.SetActive(true);
         optionsPage.SetActive(false);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void OptionsPage()
     {
         mainPage.SetActive(false);
         optionsPage.SetActive(true);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void BackToOptionsPage()
     {
@@ -131,6 +143,7 @@ public class Menu: MonoBehaviour
         imagePage.SetActive(false);
         audioPage.SetActive(false);
         optionsPage.SetActive(true);
+        AudioController.instance.TocarSFX(CloseAudio);
     }
     public void BackToMainPage()
     {
@@ -139,14 +152,17 @@ public class Menu: MonoBehaviour
         newPage.SetActive(false);
         loadPage.SetActive(false);
         quitPage.SetActive(false);
+        AudioController.instance.TocarSFX(CloseAudio);
     }
     public void QuitPage()
     {
         mainPage.SetActive(false);
         quitPage.SetActive(true);
+        AudioController.instance.TocarSFX(OpenAudio);
     }
     public void QuitGame()
     {
+        AudioController.instance.TocarSFX(CloseAudio);
         Application.Quit();
         Debug.Log("Quitou");
     }

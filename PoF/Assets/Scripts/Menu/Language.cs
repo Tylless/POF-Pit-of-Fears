@@ -38,6 +38,7 @@ public class Language : MonoBehaviour
     }
     public void Right()
     {
+        AudioController.instance.TocarSFX(Menu.instance.OpenAudio);
         selectedlang ++;
         if(selectedlang > languages.Length - 1)
         {
@@ -47,6 +48,7 @@ public class Language : MonoBehaviour
     }
     public void Left()
     {
+        AudioController.instance.TocarSFX(Menu.instance.CloseAudio);
         selectedlang --;
         if(selectedlang < 0)
         {

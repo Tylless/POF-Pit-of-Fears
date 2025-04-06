@@ -14,7 +14,10 @@ public class SpiderQueenBoss : MonoBehaviour
     public float chaseDir;
     public bool idle;
     public Animator anim;
-    
+    public AudioSource AS;
+    public AudioClip WalkA;
+    public AudioClip StunA;
+    public AudioClip BiteA;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -56,7 +59,18 @@ public class SpiderQueenBoss : MonoBehaviour
         idle = true;
         RB.velocity = Vector2.zero;
     }
-
+    public void PlayAudioWalk()
+    {
+        AS.PlayOneShot(WalkA);
+    }
+    public void PlayAudioStun()
+    {
+        AS.PlayOneShot(StunA);
+    }
+    public void PlayAudioBite()
+    {
+        AS.PlayOneShot(BiteA);
+    }
     public void Stun()
     {
         RB.velocity = new Vector2(0f, RB.velocity.y);
@@ -87,18 +101,12 @@ public class SpiderQueenBoss : MonoBehaviour
         }
         
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        
-         if (other.gameObject.tag == "DestroyBoss")
-        {
-            Destroy(this.gameObject);
-        }
-        
-    }
+    
     public void Kill()
     {
         Idle();
         PlayerMovement.instance.BeSmashed();
+        
     }
     public void GetStunned()
     {
@@ -106,6 +114,7 @@ public class SpiderQueenBoss : MonoBehaviour
         timeStunned = ActualStunTime;
         stunned = true;
     }
+   
 
     
 }

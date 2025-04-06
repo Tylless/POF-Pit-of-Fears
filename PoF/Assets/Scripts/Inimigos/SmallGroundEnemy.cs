@@ -31,6 +31,11 @@ public class SmallGroundEnemy : MonoBehaviour
     public Collider2D col;
     public PlayerMovement p;
     public bool killing;
+    public AudioSource AS;
+    public AudioClip KillA;
+    public AudioClip WalkA;
+    public AudioClip KillInAirA;
+    public AudioClip HuntA;
     // Start is called before the first frame update
     void Awake()
     {
@@ -98,6 +103,22 @@ public class SmallGroundEnemy : MonoBehaviour
     {
         onChaseArea = Physics2D.OverlapCircle(checkPoint.transform.position, .01f, chaseArea);
     }   
+    public void PlayWalkSound()
+    {
+        AS.PlayOneShot(WalkA);
+    }
+    public void PlayKillSound()
+    {
+        AS.PlayOneShot(KillA);
+    }
+    public void PlayKillAirSound()
+    {
+        AS.PlayOneShot(KillInAirA);
+    }
+    public void PlayHuntSound()
+    {
+        AS.PlayOneShot(HuntA);
+    }
     public void Patrol()
     {
         if(Mathf.Abs(transform.position.x - patrolPoints[currentPoint].position.x) > .2f)

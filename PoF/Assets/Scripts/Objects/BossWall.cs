@@ -7,6 +7,8 @@ public class BossWall : MonoBehaviour
 {
     public GameObject particle;
     public Transform[] particleSpawn;
+    public GameObject BOSSAudio;
+    public GameObject WALLAudio;
     
     public float particleSide;
     // Start is called before the first frame update
@@ -25,14 +27,19 @@ public class BossWall : MonoBehaviour
     {
         if(other.gameObject.tag == "Kill")
         {
+            
+            
             Break();
+            
         }
     }
     public void Break()
-    {
+    {   GameObject audio1 = Instantiate(BOSSAudio, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
+        GameObject audio2 = Instantiate(WALLAudio, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
         this.gameObject.SetActive(false);
         foreach(Transform t in particleSpawn)
             {
+                
                 SpawnPar(t.position);
             }
     }

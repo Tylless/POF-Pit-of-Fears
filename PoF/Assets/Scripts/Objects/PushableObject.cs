@@ -10,7 +10,8 @@ public class PushableObject : MonoBehaviour
     public SpriteRenderer SR;
     public bool beingPushed;
     public float pushingMass;
-    public bool pushingByObject;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
     
     void Awake()
     {
@@ -33,23 +34,13 @@ public class PushableObject : MonoBehaviour
             TRB.mass = pushingMass;
             SR.sortingOrder = 10;
         }
-        if(!PM.pushing && beingPushed)
+        if(!PM.pushing)
         {
             TRB.mass = 800f;
             TRB.velocity = new Vector2(0f, TRB.velocity.y);
             SR.sortingOrder = 13;
         }
-        if(pushingByObject)
-        {
-            TRB.mass = pushingMass;
-            SR.sortingOrder = 10;
-        }
-        if(!pushingByObject && !PM.pushing)
-        {
-            TRB.velocity = new Vector2(0f, TRB.velocity.y);
-            TRB.mass = 800f;
-            SR.sortingOrder = 10;
-        }
+        
         if(PM.lifting)
         {
             TRB.isKinematic = true;
@@ -69,9 +60,9 @@ public class PushableObject : MonoBehaviour
         {
             beingPushed = true;
         }
-        if(other.gameObject.tag =="Pushable")
+        if(other.gameObject.tag =="Ground")
         {
-            pushingByObject = true;
+            audioSource.PlayOneShot(audioClip);
         }
     }
     private void OnCollisionStay2D(Collision2D other)
@@ -80,10 +71,7 @@ public class PushableObject : MonoBehaviour
         {
             beingPushed = true;
         }
-        if(other.gameObject.tag =="Pushable")
-        {
-            pushingByObject = true;
-        }
+        
     }
     private void OnCollisionExit2D(Collision2D other)
     {
@@ -92,14 +80,8 @@ public class PushableObject : MonoBehaviour
         {
             beingPushed = false;
         }
-        if(other.gameObject.tag =="Pushable")
-        {
-            pushingByObject = false;
-        }
+        
         
     }
-    public void DestroyThis()
-    {
-        Destroy(this.gameObject);
-    }
+    
 }

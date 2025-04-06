@@ -13,6 +13,7 @@ public class RespawnController : MonoBehaviour
    
     public float spawn;
     public CinemachineVirtualCamera respawnCamera;
+    public int valorTrilha;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -46,6 +47,7 @@ public class RespawnController : MonoBehaviour
     {
         
         DS.SetActive(true);
+        thePlayer.transform.position = respawnPoint;
         PlayerMovement.instance.canMove = false;
         CameraManager.instance._currentCamera.enabled = false; 
         spawn = 1;
@@ -54,9 +56,11 @@ public class RespawnController : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         spawn = 0f;
         CameraManager.instance._currentCamera = respawnCamera;
-        thePlayer.transform.position = respawnPoint;
         
-        CameraManager.instance._currentCamera.enabled = true; 
+        
+        CameraManager.instance._currentCamera.enabled = true;
+        AudioController.instance.trilhaSonora.volume = 0f;
+
         yield return new WaitForSeconds(waitToRespawn);
         
         
@@ -69,6 +73,8 @@ public class RespawnController : MonoBehaviour
         PlayerMovement.instance.jumping = false;
         PlayerMovement.instance.BlockMovment();
         PlayerMovement.instance.PRB.velocity = Vector2.zero;
+        AudioController.instance.trilhaSonora.volume = 1f;
+        AudioController.instance.MudarTrilha(valorTrilha);
         DS.SetActive(false);      
         
         yield return null;

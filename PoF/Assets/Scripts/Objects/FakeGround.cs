@@ -7,7 +7,7 @@ public class FakeGround : MonoBehaviour
     public static FakeGround instance;
     public Transform[] particleSpawn;
     public GameObject particle;
-    
+    public GameObject breakEffect;
 
     // Start is called before the first frame update
     void Awake()
@@ -39,6 +39,8 @@ public class FakeGround : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player")
         {
+            GameObject audioef = Instantiate(breakEffect, new Vector3(this.transform.position.x, this.transform.position.y, 
+            this.transform.position.z), Quaternion.identity);
             this.gameObject.SetActive(false);
             foreach(Transform t in particleSpawn)
             {

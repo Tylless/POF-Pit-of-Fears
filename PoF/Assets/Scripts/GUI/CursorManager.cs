@@ -8,6 +8,7 @@ public class CursorManager : MonoBehaviour
     public bool PauseOn;
     public bool CSPauseOn;
     public bool isCursorOn;
+    public bool ForceCursor;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class CursorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CSPauseOn || PauseOn)
+        if(CSPauseOn || PauseOn || ForceCursor)
         {
             isCursorOn = true;
         }else

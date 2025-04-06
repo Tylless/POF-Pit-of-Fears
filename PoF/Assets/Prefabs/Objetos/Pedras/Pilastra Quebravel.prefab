@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BreakEffect: {fileID: 2231314482138093427, guid: f7bb8e3e357a1214092e33e3007ed993, type: 3}
-  col: {fileID: 0}
+  col: {fileID: 71956686953226090}
+  destroyEffect: {fileID: 921718267906200381, guid: 33c9bde10404ff04da602d64e3d7c7f3, type: 3}
 --- !u!50 &3518978315138071054
 Rigidbody2D:
   serializedVersion: 4

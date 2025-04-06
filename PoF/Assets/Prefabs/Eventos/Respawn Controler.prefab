@@ -48,3 +48,4 @@ MonoBehaviour:
   DS: {fileID: 0}
   spawn: 0
   respawnCamera: {fileID: 0}
+  valorTrilha: 0

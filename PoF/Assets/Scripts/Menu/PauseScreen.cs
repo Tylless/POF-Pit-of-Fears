@@ -12,7 +12,8 @@ public class PauseScreen : MonoBehaviour
     public bool Paused;
     public static PauseScreen instance;
     public RuntimeAnimatorController animCon;
-
+    public AudioClip ConfirmAudio;
+    public AudioClip DeclineAudio;
     void Awake()
     {
         if (instance == null)
@@ -29,10 +30,12 @@ public class PauseScreen : MonoBehaviour
     {
         optionsScreen.SetActive(true);
         mainPage.SetActive(false);
+        AudioController.instance.TocarSFX(ConfirmAudio);
     }
 
     public void Respawn()
     {
+        AudioController.instance.TocarSFX(ConfirmAudio);
         RespawnController.instance.Respawn();
         CloseScreen();
     }
@@ -71,6 +74,14 @@ public class PauseScreen : MonoBehaviour
         AudioScreen.SetActive(false);
         ControlsScreen.SetActive(false);
     }
+    public void GoToMainPageAudio()
+    {
+        AudioController.instance.TocarSFX(DeclineAudio);
+        optionsScreen.SetActive(false);
+        mainPage.SetActive(true);
+        AudioScreen.SetActive(false);
+        ControlsScreen.SetActive(false);
+    }
     public void OpenScreen()
     {
         Cursor.visible = true;
@@ -82,6 +93,7 @@ public class PauseScreen : MonoBehaviour
 
     public void CloseScreen()
     {
+        
         Cursor.visible = false;
         PScreen.SetActive(false);
         Paused = false;
@@ -91,23 +103,27 @@ public class PauseScreen : MonoBehaviour
     }
     public void BackToMenu()
     {
-        SceneManager.LoadScene(1);
+        AudioController.instance.TocarSFX(DeclineAudio);
+        SceneManager.LoadScene("Menu");
         Menu.instance.onStartPage = false;
     }
     public void BackToOptionsPage()
     {
+        AudioController.instance.TocarSFX(DeclineAudio);
         optionsScreen.SetActive(true);
         AudioScreen.SetActive(false);
         ControlsScreen.SetActive(false);
     }
     public void OpenAudio()
     {
+        AudioController.instance.TocarSFX(ConfirmAudio);
         optionsScreen.SetActive(false);
         AudioScreen.SetActive(true);
         
     }
     public void OpenControl()
     {
+        AudioController.instance.TocarSFX(ConfirmAudio);
         optionsScreen.SetActive(false);
         ControlsScreen.SetActive(true);
         

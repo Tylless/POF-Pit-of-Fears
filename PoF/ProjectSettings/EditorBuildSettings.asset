@@ -5,14 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 8c13314910463324b85ec6bb1eb3be9b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a87ac63642ccd8d4bbc7edd3a5fa519c
   - enabled: 1
-    path: Assets/Scenes/The PoF(Start).unity
+    path: Assets/Scenes/StartCS.unity
+    guid: 6da27a8956750984c849a5d90cce33d9
+  - enabled: 1
+    path: Assets/Scenes/SnowyForest.unity
     guid: c93712d32f2c986489d0e8bf54cc7087
   - enabled: 1
     path: Assets/Scenes/The Entrance.unity
@@ -20,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/The Nest.unity
     guid: e14a8dc65ff9b8b488ba508b6793d60e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo End.unity
     guid: 68c73c344295f4e49acd03f3653797bb
   - enabled: 0

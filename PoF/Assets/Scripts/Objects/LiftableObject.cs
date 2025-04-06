@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
+using Unity.Mathematics;
 public class LiftableObject : MonoBehaviour
 
 {
@@ -28,6 +29,9 @@ public class LiftableObject : MonoBehaviour
     public LayerMask ground;
     public bool RP;
     public bool LP;
+    public AudioSource audioPlayer;
+    public AudioClip impact;
+    public GameObject destroyEffect;
     
     
     void Awake()
@@ -43,7 +47,8 @@ public class LiftableObject : MonoBehaviour
     }
      public void SummonPar(float xSpeed)
     {
-        GameObject Eff = Instantiate(BreakEffect);
+        GameObject Eff = Instantiate(BreakEffect, new Vector3(this.transform.position.x, this.transform.position.y, 
+            this.transform.position.z), Quaternion.identity);
         Eff.transform.position = this.transform.position;
         Vector2 fall = new Vector2(xSpeed, 4f);
         Eff.GetComponent<Rigidbody2D>().AddForce(fall, ForceMode2D.Impulse);
@@ -215,23 +220,24 @@ public class LiftableObject : MonoBehaviour
     {
         if(other.gameObject.tag == "DamageTaker")
         {
-        Explode();
+            GameObject audioef = Instantiate(destroyEffect, new Vector3(this.transform.position.x, this.transform.position.y, 
+            this.transform.position.z), Quaternion.identity);
+            Destroy(audioef.gameObject, 1.5f);
+            Explode();
         
         }
-    }
-    public void Destroy()
-    {
-        Destroy(this.gameObject);
-
+        if(other.gameObject.tag == "Ground" ||other.gameObject.tag == "Pushable")
+        {
+            audioPlayer.PlayOneShot(impact);
+        }
     }
     
-    public void DestroyThis()
-    {
-        Destroy(this.gameObject);
-    }
+    
+    
     public void Explode()
     {
-        Destroy();
+        
+        Destroy(this.gameObject);
         SummonPar(.5f);
         SummonPar(-.5f);
         }
