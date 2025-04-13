@@ -7,6 +7,8 @@ public class Pit : MonoBehaviour
     public Animator anim;
     public bool explode;
     public NextScene NS;
+    public AudioClip Kaboom;
+    public AudioSource AS;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,10 @@ public class Pit : MonoBehaviour
     public void Destroy()
     {
         Destroy(this.gameObject);
+    }
+    public void PlayAudio()
+    {
+        AS.PlayOneShot(Kaboom);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
