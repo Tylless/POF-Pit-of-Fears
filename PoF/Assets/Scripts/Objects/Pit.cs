@@ -44,10 +44,5 @@ public class Pit : MonoBehaviour
             anim.SetTrigger("Open");
         }
     }
-    private void OnTriggerExit2D(Collider2D other) {
-        if(other.tag == "Player")
-        {
-            anim.SetTrigger("Close");
-        }
-    }
+    
 }

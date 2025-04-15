@@ -91360,11 +91360,11 @@ PrefabInstance:
     - target: {fileID: 1230072662075840627, guid: 99f22c35e9d711446ae76fb2fc3b9e07, type: 3}
       propertyPath: passosAudioClip.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 8ec322d3add6d1e43bef75e467c0c98c, type: 3}
+      objectReference: {fileID: 8300000, guid: daddd3d755d949c4cb775f5fdb4457ef, type: 3}
     - target: {fileID: 1230072662075840627, guid: 99f22c35e9d711446ae76fb2fc3b9e07, type: 3}
       propertyPath: passosAudioClip.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: f849076729bd42c438f2ed079364299f, type: 3}
+      objectReference: {fileID: 8300000, guid: d006e225be7875042aafa9ca69c6fd2c, type: 3}
     - target: {fileID: 1230072662075840627, guid: 99f22c35e9d711446ae76fb2fc3b9e07, type: 3}
       propertyPath: passosAudioClip.Array.data[2]
       value: 
@@ -92302,8 +92302,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 13.2493, y: -12.86755, z: 0}
-    m_Extent: {x: 14.2498, y: 13.86805, z: 0}
+    m_Center: {x: 13.250751, y: -12.8676, z: 0}
+    m_Extent: {x: 14.24965, y: 13.8681, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 49.662964
@@ -93044,6 +93044,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3058995337633253313, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+      propertyPath: ConstSFX
+      value: 
+      objectReference: {fileID: 1134227097}
+    - target: {fileID: 3058995337633253313, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
       propertyPath: trilhasSonoras.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -93056,6 +93060,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: f0a9d6a16f5d88741a9572501e8cef87, type: 3}
     - target: {fileID: 4284103003785718450, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b31645a1958b1b94da2d26fadab99f33, type: 3}
+    - target: {fileID: 5643118331303842239, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b31645a1958b1b94da2d26fadab99f33, type: 3}
@@ -93075,6 +93083,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2032174633}
   m_SourcePrefab: {fileID: 100100000, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+--- !u!82 &1134227097 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5643118331303842239, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+  m_PrefabInstance: {fileID: 1134227096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1144555894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2488701428502291244, guid: e04fad5992e288649998764a0bf0fba8, type: 3}

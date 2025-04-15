@@ -789,7 +789,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -21621,6 +21621,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2246570688294638190, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058995337633253313, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+      propertyPath: ConstSFX
+      value: 
+      objectReference: {fileID: 1518688064}
     - target: {fileID: 3058995337633253313, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
       propertyPath: trilhasSonoras.Array.size
       value: 1
@@ -21654,9 +21662,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9075444515845424740, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
-      insertIndex: 4
+      insertIndex: -1
       addedObject: {fileID: 758386183}
   m_SourcePrefab: {fileID: 100100000, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+--- !u!82 &1518688064 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5643118331303842239, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+  m_PrefabInstance: {fileID: 1518688063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1519870867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3428837622931591154, guid: 128c8efdeb2e0ac44a2c17dae5fa9075, type: 3}

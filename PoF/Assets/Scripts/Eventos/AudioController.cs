@@ -27,7 +27,6 @@ public class AudioController : MonoBehaviour
         trilhaSonora.clip = trilhaSonoraAtual;
         trilhaSonora.loop = true;
         trilhaSonora.Play();
-        SFXConstante();
     }
 
     // Update is called once per frame
@@ -48,8 +47,5 @@ public class AudioController : MonoBehaviour
     {   
         SFX.PlayOneShot(sfx);
     }
-    public void SFXConstante()
-    {
-        ConstSFX.Play();
-    }
+    
 }
