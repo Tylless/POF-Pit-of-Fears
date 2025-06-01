@@ -7,7 +7,7 @@ public class AudioController : MonoBehaviour
     public static AudioController instance;
     public AudioSource trilhaSonora;
     public AudioSource SFX;
-    public AudioSource ConstSFX;
+    
     public AudioClip[] trilhasSonoras;
     private AudioClip trilhaSonoraAtual;
     

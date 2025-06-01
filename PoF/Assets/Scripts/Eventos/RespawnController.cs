@@ -14,6 +14,7 @@ public class RespawnController : MonoBehaviour
     public float spawn;
     public CinemachineVirtualCamera respawnCamera;
     public int valorTrilha;
+    public int objt;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -55,6 +56,14 @@ public class RespawnController : MonoBehaviour
         spawn = 0.9f;
         yield return new WaitForSeconds(.1f);
         spawn = 0f;
+        if(MainObjective.instance.PTBR)
+        {
+            MainObjective.instance.objetivoAtualMenu.text =  MainObjective.instance.objetivos[objt];
+        }else if (MainObjective.instance.ENG)
+        {
+            MainObjective.instance.objetivoAtualMenu.text =  MainObjective.instance.objectives[objt];
+        }
+        
         CameraManager.instance._currentCamera = respawnCamera;
         
         

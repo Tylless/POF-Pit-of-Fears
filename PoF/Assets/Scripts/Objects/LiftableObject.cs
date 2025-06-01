@@ -228,7 +228,11 @@ public class LiftableObject : MonoBehaviour
         }
         if(other.gameObject.tag == "Ground" ||other.gameObject.tag == "Pushable")
         {
-            audioPlayer.PlayOneShot(impact);
+            
+            
+                audioPlayer.PlayOneShot(impact);
+            
+            
         }
     }
     

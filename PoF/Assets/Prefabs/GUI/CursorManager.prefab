@@ -47,3 +47,4 @@ MonoBehaviour:
   PauseOn: 0
   CSPauseOn: 0
   isCursorOn: 0
+  ForceCursor: 0

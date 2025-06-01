@@ -2262,6 +2262,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2246570688294638190, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3058995337633253313, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
       propertyPath: trilhasSonoras.Array.size
       value: 1

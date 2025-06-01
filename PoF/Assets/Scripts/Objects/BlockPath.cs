@@ -23,8 +23,12 @@ public class BlockPath : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            if(pathBarrier.activeSelf == false ) 
+            {
             pathBarrier.SetActive(true);
             a.PlayOneShot(AU);
+            }
+           
         }
     }
 }

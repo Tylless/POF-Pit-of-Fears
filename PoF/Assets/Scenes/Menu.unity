@@ -13110,7 +13110,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DEMO
+  m_text: 'DEMO
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95f1dfe9cdff126429fcd7b968f434db, type: 2}
   m_sharedMaterial: {fileID: 2190985677577390970, guid: 95f1dfe9cdff126429fcd7b968f434db, type: 2}
@@ -15009,6 +15011,10 @@ PrefabInstance:
     - target: {fileID: 676075712463516517, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
       propertyPath: m_Volume
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246570688294638190, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3058995337633253313, guid: 13fe74a9ad22fdd40ad46d020715a9cc, type: 3}
       propertyPath: trilhasSonoras.Array.size
