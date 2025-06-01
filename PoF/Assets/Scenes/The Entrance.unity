@@ -108089,8 +108089,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 13.2495, y: -12.868449, z: 0}
-    m_Extent: {x: 14.2493, y: 13.86905, z: 0}
+    m_Center: {x: 13.25015, y: -12.8679, z: 0}
+    m_Extent: {x: 14.24985, y: 13.868199, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 49.662964
@@ -116960,6 +116960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 3428837622931591154, guid: 128c8efdeb2e0ac44a2c17dae5fa9075, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -116970,8 +116974,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1045286572322167554, guid: 128c8efdeb2e0ac44a2c17dae5fa9075, type: 3}
   m_PrefabInstance: {fileID: 1663405865}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1663405867 stripped
-Transform:
+--- !u!224 &1663405867 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 2351653610273566893, guid: 128c8efdeb2e0ac44a2c17dae5fa9075, type: 3}
   m_PrefabInstance: {fileID: 1663405865}
   m_PrefabAsset: {fileID: 0}
@@ -142489,27 +142493,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3080802812701584398, guid: bd4aca3dbc0c0184e946c1f709efa06a, type: 3}
       propertyPath: m_LocalPosition.x
