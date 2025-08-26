@@ -2079,7 +2079,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7257230285169817510}
         m_TargetAssemblyTypeName: PauseScreen, Assembly-CSharp
-        m_MethodName: GoToMainPage
+        m_MethodName: GoToMainPageAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5009,7 +5009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6969035023221140613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5399,7 +5399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &791038797993275046
 RectTransform:
   m_ObjectHideFlags: 0
