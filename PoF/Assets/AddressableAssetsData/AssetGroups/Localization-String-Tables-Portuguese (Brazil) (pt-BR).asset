@@ -17,14 +17,32 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 2703e097dd6c35244af23b4762e9cb1a
   m_SerializeEntries:
-  - m_GUID: d6dfb7f820d7370409d1ca6414fe17fc
-    m_Address: Menu_pt-BR
+  - m_GUID: 307c93d212a84fd4c8fe2e6d4fa4563d
+    m_Address: Copyright_pt-BR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt-BR
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 673f78f3c483deb4caf8c0d38e313d1e
     m_Address: Start_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7887695292d3ea74cae9ec78a508c14d
+    m_Address: PauseScreen_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: add5c3962ee518d459f33689ebcf8467
+    m_Address: DEMO_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6dfb7f820d7370409d1ca6414fe17fc
+    m_Address: Menu_pt-BR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt-BR
@@ -37,24 +55,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f8f2e717596e0bd4c80e83bf93888ef7
     m_Address: Death_pt-BR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-pt-BR
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7887695292d3ea74cae9ec78a508c14d
-    m_Address: PauseScreen_pt-BR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-pt-BR
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 307c93d212a84fd4c8fe2e6d4fa4563d
-    m_Address: Copyright_pt-BR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-pt-BR
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: add5c3962ee518d459f33689ebcf8467
-    m_Address: DEMO_pt-BR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt-BR
